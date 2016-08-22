@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * base module code
+ */
+
+/**
+ * implements hook_permission
+ */
+function rules_api_permission() {
+	$items = array();
+
+	$items['administer rules api'] = array(
+		'title' => t('Administer Rules API'),
+		'description' => t('Configure Rules which make API calls using drupal_http_request'),
+		'restrict access' => TRUE,
+	);
+
+	return $items;
+}
+
+
